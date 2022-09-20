@@ -33,7 +33,7 @@ let faceValue = {
   "A": 14,
 }
 
-function shuffleDeck(arr) {
+function shuffleTheDeck(arr) {
   let currentCard = arr.length;
   while (0 !== currentCard) {
     let randomCard = Math.floor(Math.random() * currentCard);
@@ -45,3 +45,12 @@ function shuffleDeck(arr) {
   return arr;
 }
 
+let shuffledDeck = shuffleTheDeck(deck)
+
+for (let i = 0; i < 26; i++) {
+  playerOne.numCards.push(shuffledDeck.pop(0))
+  playerTwo.numCards.push(shuffledDeck.pop(0))
+}
+
+console.log(playerOne.numCards);
+console.log(playerTwo.numCards);
