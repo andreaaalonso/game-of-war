@@ -33,3 +33,15 @@ let faceValue = {
   "A": 14,
 }
 
+function shuffleDeck(arr) {
+  let currentCard = arr.length;
+  while (0 !== currentCard) {
+    let randomCard = Math.floor(Math.random() * currentCard);
+    currentCard -= 1;
+    let tmp = arr[currentCard];
+    arr[currentCard] = arr[randomCard];
+    arr[randomCard] = tmp;
+  }
+  return arr;
+}
+
